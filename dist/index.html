@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Nick Vincent, User-Centered Design &amp; Development</title>
+    <meta name="description" content="Resumé of Nick Vincent. Over 14 years of user-centered design &amp; development.">
+    <link href="css/styles.css" media="all" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,500" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" href="favicon.ico">
+  </head>
+  <body>
+
+    <article id="resume">
+
+      <header id="contact">
+        <div class="col-1">
+          <img class="photo" src="img/photo.jpg" alt="Nick" height="100" width="100" />
+        </div>
+        <div class="col-2">
+          <h1>Nick Vincent</h1>
+          <p>
+            User-centered design &amp; development<br />
+            <a title="Contact" target="_blank" href="mailto:the.nick.vincent@gmail.com">the.nick.vincent@gmail.com</a>
+          </p>
+        </div>
+      </header>
+
+      <section id="expertise">
+        <div class="col-1">
+          <h2>Expertise</h2>
+        </div>
+        <div class="col-2">
+          <ul class="inline">
+
+            <li>Design</li>
+            <li>Branding</li>
+            <li>Typography</li>
+            <li>Motion</li>
+
+            <li>Code</li>
+            <li>Markup</li>
+            <li>Stylesheets</li>
+            <li>Interaction</li>
+
+            <li>Agile</li>
+            <li>Scrum</li>
+            <li>Git</li>
+            <li>Rails</li>
+
+          </ul>
+        </div>
+      </section>
+
+      <section id="experience">
+        <div class="col-1">
+          <h2>Experience</h2>
+        </div>
+        <div class="col-2">
+          <ul>
+
+            <li id="square">
+              <h3><a href="https://squareup.com" target="_blank">Square, Inc.</a> Economic Empowerment</h3>
+              <p class="position">Front-End Engineer, Apr 2014 &ndash; Present</p>
+              <p>Making commerce easy and accessible to everyone.</p>
+              <ul class="bulleted">
+                <li>
+                  Co-author of styles &amp; javascript framework powering
+                  the front-end of main website and other public-facing apps
+                </li>
+                <li>
+                  Front-end lead for hardware e-commerce website
+                </li>
+              </ul>
+            </li>
+
+            <li id="zappos">
+              <h3><a href="http://www.zappos.com" target="_blank">Zappos.com</a> Innovation Lab</h3>
+              <p class="position">Senior Developer, May 2011 &ndash; Apr 2014</p>
+              <p>
+                Led UX design &amp; UI coding on various ecommerce experiments:
+              </p>
+              <ul class="bulleted">
+                <li>
+                  Rebranded Zappos Labs website with a focus on recruiting
+                </li>
+                <li>
+                  Built Zappos Top Pins with Pinterest API launch partnership
+                </li>
+                <li>
+                  Evolved the branding &amp; design of curated fashion microsite
+                </li>
+                <li>
+                  Won hackathon with web app to search by image &amp; color
+                </li>
+              </ul>
+            </li>
+
+            <li id="self-employed">
+              <h3><a href="http://nickvincent.carbonmade.com" target="_blank">Self-Employed</a> Freelance Work</h3>
+              <p class="position">UX Design &amp; Development, Apr 2010 &ndash; May 2011</p>
+            </li>
+
+            <li id="rrpartners">
+              <h3><a href="http://www.rrpartners.com" target="_blank">R&amp;R Partners</a> Advertising Agency</h3>
+              <p class="position">Web Developer, Apr 2009 &ndash; Apr 2010</p>
+            </li>
+
+            <li id="eatdrink">
+              <h3><a href="http://www.eatdrink.com" target="_blank">Eatdrink</a> Boutique Creative Agency</h3>
+              <p class="position">
+                Web / Interactive Lead, Mar 2006 &ndash; Mar 2009<br />
+                Web Designer / Developer, Sep 2003 &ndash; Mar 2006<br />
+                Web Intern, Mar 2003 &ndash; Sep 2003
+              </p>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+
+      <section id="education">
+        <div class="col-1">
+          <h2>Education</h2>
+        </div>
+        <div class="col-2">
+          <h3>Bachelor of Arts in Computer Science</h3>
+          <p class="degree">University of Nevada, Las Vegas, Dec 2005</p>
+          <h3>Associate of Applied Science in Web Design</h3>
+          <p class="degree">College of Southern Nevada, Dec 2003</p>
+        </div>
+      </section>
+
+      <section id="etcetera">
+        <div class="col-1">
+          <h2>Etcetera</h2>
+        </div>
+        <div class="col-2">
+          <p>
+            I made <a target="_blank" title="Get the DOM X-Ray Chrome Extension"
+            href="https://chrome.google.com/webstore/detail/dom-x-ray/olfkgegmjhgehnakignkabhbdchkhnkj">DOM X-Ray</a>,
+            a dev tool to see through the DOM.
+            <a title="Toggle the DOM X-Ray demo" href="#" onclick="toggleDOMXRay(); return false;">
+              Demo it here!
+            </a>
+          </p>
+          <p>
+            I’m also known to:<br />
+            <a target="_blank" title="Instagram" href="https://instagram.com/sixftdwarf">snap photos</a>,
+            <a target="_blank" title="YouTube" href="https://youtube.com/sixftdwarf">strum tunes</a>,
+            <a target="_blank" title="Bandcamp" href="https://annumford.bandcamp.com">pen odes</a>,
+            &amp; <a target="_blank" title="WordPress" href="http://sixfootdwarf.com">wax poetic</a>.
+          </p>
+        </div>
+      </section>
+
+    </article>
+
+    <script type="text/javascript">
+      function toggleDOMXRay() {
+        html = document.getElementsByTagName('html')[0];
+        if (html.id === 'dom-x-ray') {
+          html.id = '';
+        } else {
+          html.id = 'dom-x-ray';
+        }
+      }
+    </script>
+
+  </body>
+</html>
