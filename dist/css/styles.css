@@ -51,6 +51,17 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
+body {
+  padding: 1em;
+  min-width: 20em; }
+
+header,
+section {
+  margin-bottom: 3em; }
+
+header {
+  text-align: center; }
+
 html {
   -webkit-text-size-adjust: 100%;
      -moz-text-size-adjust: 100%;
