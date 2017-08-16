@@ -73,3 +73,14 @@ body {
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5; }
+
+#dom-x-ray, #dom-x-ray:before, #dom-x-ray:after,
+#dom-x-ray *, #dom-x-ray *:before, #dom-x-ray *:after {
+  color: hotpink !important;
+  border-color: hotpink !important;
+  background-color: rgba(112, 187, 255, 0.03) !important;
+  outline: 1px solid rgba(255, 105, 180, 0.25) !important; }
+
+#dom-x-ray img {
+  opacity: 0.8 !important;
+  outline: 1px solid rgba(255, 105, 180, 0.31) !important; }
