@@ -25,7 +25,7 @@ header {
 }
 
 .col-1 {
-  border-top: 1px solid #d8d8d8;
+  border-top: 1px solid $color-light-grey;
   padding: 2em 0;
 
   header & {
@@ -62,7 +62,7 @@ header {
     text-align: right;
     padding: 0 2em 0 0;
     border-top: 0;
-    border-right: 1px solid #d8d8d8;
+    border-right: 1px solid $color-light-grey;
   }
 
   .col-2 {
