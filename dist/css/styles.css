@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -53,7 +54,7 @@ table {
 
 body {
   padding: 1em;
-  min-width: 20em; }
+  min-width: 320px; }
 
 header,
 section {
@@ -113,10 +114,13 @@ html {
 body {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
   background-color: #F8F8F8;
   color: #111111; }
+  @media (min-width: 420px) {
+    body {
+      font-size: 16px; } }
 
 p,
 ul,
@@ -178,6 +182,34 @@ h3 {
 
 .position {
   margin-bottom: 0; }
+
+ul.bulleted li {
+  display: block;
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 0; }
+  ul.bulleted li:before {
+    content: '•';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1em;
+    color: #CCCCCC;
+    text-align: center; }
+
+ul.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  ul.flex li {
+    width: 33.33333%;
+    margin-bottom: 0; }
+    @media (min-width: 544px) {
+      ul.flex li {
+        width: 25%; } }
 
 #dom-x-ray, #dom-x-ray:before, #dom-x-ray:after,
 #dom-x-ray *, #dom-x-ray *:before, #dom-x-ray *:after {

@@ -5,10 +5,14 @@ html {
 body {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
-  font-size: $font-size-base;
+  font-size: $font-size-small;
   line-height: 1.5;
   background-color: $color-almost-white;
   color: $color-almost-black;
+
+  @media (min-width: 420px) {
+    font-size: $font-size-base;
+  }
 }
 
 p,

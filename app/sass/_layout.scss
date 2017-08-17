@@ -6,7 +6,7 @@
 
 body {
   padding: 1em;
-  min-width: 20em;
+  min-width: 320px;
 }
 
 header,
@@ -25,7 +25,7 @@ header {
 }
 
 .col-1 {
-  border-top: 1px solid $color-light-grey;
+  border-top: 1px solid $color-lighter-grey;
   padding: 2em 0;
 
   header & {
@@ -62,7 +62,7 @@ header {
     text-align: right;
     padding: 0 2em 0 0;
     border-top: 0;
-    border-right: 1px solid $color-light-grey;
+    border-right: 1px solid $color-lighter-grey;
   }
 
   .col-2 {
