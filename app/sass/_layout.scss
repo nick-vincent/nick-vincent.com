@@ -34,7 +34,7 @@ header {
   }
 }
 
-@media ( min-width: 420px ) {
+@media (min-width: 420px) {
   body {
     padding: 2em;
   }
@@ -45,7 +45,7 @@ header {
   }
 }
 
-@media ( min-width: 704px ) {
+@media (min-width: 704px) {
   header,
   section {
     display: flex;
