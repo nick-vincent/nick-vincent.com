@@ -2,6 +2,15 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
+const browserSync = require('browser-sync').create();
+
+gulp.task('browserSync', function() {
+  browserSync.init({
+    server: {
+      baseDir: 'dist'
+    }
+  })
+})
 
 gulp.task('styles', function() {
   gulp.src('app/sass/styles.scss')
@@ -11,9 +20,13 @@ gulp.task('styles', function() {
         browsers: ['last 2 version']
       })
     ]))
-    .pipe(gulp.dest('./dist/css/'));
+    .pipe(gulp.dest('./dist/css/'))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
 });
 
-gulp.task('default', function() {
+gulp.task('default', ['browserSync', 'styles'], function() {
   gulp.watch('app/sass/**/*.scss', ['styles']);
+  gulp.watch('dist/*.html', browserSync.reload);
 });
