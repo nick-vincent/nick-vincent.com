@@ -211,6 +211,18 @@ ul.flex {
       ul.flex li {
         width: 25%; } }
 
+.photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-backface-visibility: false;
+          backface-visibility: false;
+  -webkit-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.05s;
+  transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.05s; }
+  header:hover .photo {
+    -webkit-transform: translate3d(0, 0, 0) scale(1.1) rotate(15deg);
+            transform: translate3d(0, 0, 0) scale(1.1) rotate(15deg); }
+
 #dom-x-ray, #dom-x-ray:before, #dom-x-ray:after,
 #dom-x-ray *, #dom-x-ray *:before, #dom-x-ray *:after {
   color: hotpink !important;
