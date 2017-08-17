@@ -145,8 +145,12 @@ a {
     right: 0;
     bottom: 0;
     height: 1px;
-    background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), color-stop(50%, #3388BB), to(#3388BB));
-    background: linear-gradient(to bottom, transparent 0%, transparent 50%, #3388BB 50%, #3388BB 100%); }
+    border-bottom: 1px solid #3388BB; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+      a:after {
+        border-bottom: 0;
+        background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), color-stop(50%, #3388BB), to(#3388BB));
+        background: linear-gradient(to bottom, transparent 0%, transparent 50%, #3388BB 50%, #3388BB 100%); } }
 
 h1 {
   font-size: 3em;

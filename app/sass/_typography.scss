@@ -41,13 +41,18 @@ a {
     right: 0;
     bottom: 0;
     height: 1px;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      transparent 50%,
-      $color-primary-blue 50%,
-      $color-primary-blue 100%
-    );
+    border-bottom: 1px solid $color-primary-blue;
+
+    @media (min-resolution: 2dppx) {
+      border-bottom: 0;
+      background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        transparent 50%,
+        $color-primary-blue 50%,
+        $color-primary-blue 100%
+      );
+    }
   }
 }
 
