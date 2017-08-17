@@ -1,0 +1,7 @@
+@function px-to-em($pixels, $context: $font-size-base) {
+  @return $pixels / $context * 1em;
+}
+
+@function strip-unit($number) {
+  @return $number / ($number * 0 + 1);
+}
