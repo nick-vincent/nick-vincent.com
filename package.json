@@ -6,8 +6,11 @@
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.7.0",
+    "gulp-htmlnano": "^0.1.0",
     "gulp-postcss": "^7.0.0",
+    "gulp-posthtml": "^3.0.0",
     "gulp-sass": "^3.1.0",
-    "gulp-slim": "^0.3.0"
+    "gulp-slim": "^0.3.0",
+    "posthtml-obfuscate": "^0.1.5"
   }
 }
