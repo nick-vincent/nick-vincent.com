@@ -14,7 +14,7 @@ gulp.task('browserSync', function() {
 })
 
 gulp.task('styles', function() {
-  gulp.src('app/sass/styles.scss')
+  gulp.src('src/scss/styles.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
       autoprefixer({
@@ -29,6 +29,6 @@ gulp.task('styles', function() {
 });
 
 gulp.task('default', ['browserSync', 'styles'], function() {
-  gulp.watch('app/sass/**/*.scss', ['styles']);
+  gulp.watch('src/scss/**/*.scss', ['styles']);
   gulp.watch('dist/*.html', browserSync.reload);
 });
