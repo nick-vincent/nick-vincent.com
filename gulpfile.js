@@ -3,6 +3,7 @@ const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const browserSync = require('browser-sync').create();
+const cleanCSS = require('gulp-clean-css');
 
 gulp.task('browserSync', function() {
   browserSync.init({
@@ -20,6 +21,7 @@ gulp.task('styles', function() {
         browsers: ['last 2 version']
       })
     ]))
+    .pipe(cleanCSS())
     .pipe(gulp.dest('./dist/css/'))
     .pipe(browserSync.reload({
       stream: true
