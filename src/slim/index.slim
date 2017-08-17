@@ -1,0 +1,155 @@
+doctype html
+html lang="en"
+  head
+    meta charset="utf-8"
+    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
+    meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"
+    title Nick Vincent, User-Centered Design &amp; Development
+    meta name="description" content="Resumé of Nick Vincent. Over 14 years of user-centered design &amp; development."
+    link href="css/styles.css" media="all" rel="stylesheet" type="text/css"
+    link href="https://fonts.googleapis.com/css?family=Ubuntu:300,500" rel="stylesheet" type="text/css"
+    link href="favicon.ico" rel="icon" type="image/png"
+
+  body
+    article#resume
+
+      header#contact
+        .col-1
+          img.photo src="img/photo.jpg" alt="Nick" height="100" width="100"
+        .col-2
+          markdown:
+            # Nick Vincent
+
+            User-centered design & development
+
+            <the.nick.vincent@gmail.com>
+
+      section#expertise
+        .col-1
+          h2 Expertise
+        .col-2
+          markdown:
+            {: .flex }
+            - Design
+            - Branding
+            - Typography
+            - Motion
+            - Code
+            - Markup
+            - Stylesheets
+            - Interaction
+            - Agile
+            - Scrum
+            - Git
+            - Rails
+
+      section#experience
+        .col-1
+          h2 Experience
+        .col-2
+          markdown:
+            - ### [Square, Inc.][1]{: target="_blank" } Economic Empowerment
+              {: id="square" }
+
+              {: .position}
+              Front-End Engineer, Apr 2014 – Present
+
+              Making commerce easy and accessible to everyone.
+
+              {: .bulleted }
+              - Co-author of styles & javascript framework powering the
+                front-end of main website and other public-facing apps
+              - Front-end lead for hardware e-commerce website
+
+            - ### [Zappos.com][2]{: target="_blank" } Innovation Lab
+              {: id="zappos" }
+
+              {: .position}
+              Senior Developer, May 2011 – Apr 2014
+
+              Led UX design & UI coding on various ecommerce experiments:
+
+              {: .bulleted }
+              - Rebranded Zappos Labs website with a focus on recruiting
+              - Built Zappos Top Pins with Pinterest API launch partnership
+              - Evolved the branding &amp; design of curated fashion microsite
+              - Won hackathon with web app to search by image &amp; color
+
+            - ### [Self-Employed][3]{: target="_blank" } Freelance Work
+              {: id="self-employed" }
+
+              {: .position}
+              UX Design & Development, Apr 2010 – May 2011
+
+            - ### [R&R Partners][4]{: target="_blank" } Advertising Agency
+              {: id="rrpartners" }
+
+              {: .position}
+              Web Developer, Apr 2009 – Apr 2010
+
+            - ### [Eatdrink][5]{: target="_blank" } Boutique Creative Agency
+              {: id="eatdrink" }
+
+              {: .position}
+              Web / Interactive Lead, Mar 2006 – Mar 2009 \\
+              Web Designer / Developer, Sep 2003 – Mar 2006 \\
+              Web Intern, Mar 2003 – Sep 2003
+
+            [1]: https://squareup.com "Square, Inc."
+            [2]: https://www.zappos.com "Zappos.com"
+            [3]: https://nickvincent.carbonmade.com "Portfolio"
+            [4]: https://www.rrpartners.com "R&R Partners"
+            [5]: http://www.eatdrink.com "Eatdrink"
+
+      section#education
+        .col-1
+          h2 Education
+        .col-2
+          markdown:
+            ### Bachelor of Arts in Computer Science
+
+            {: .degree }
+            University of Nevada, Las Vegas, Dec 2005
+
+            ### Associate of Applied Science in Web Design
+
+            {: .degree }
+            College of Southern Nevada, Dec 2003
+
+      section#etcetera
+        .col-1
+          h2 Etcetera
+        .col-2
+          markdown:
+            I made [DOM X-Ray][1]{: target="_blank" },
+            a dev tool to see through the DOM.
+            [Demo it here!][2]{: #toggle-demo }
+
+            I’m also known to: \\
+            [snap photos][3]{: target="_blank" },
+            [strum tunes][4]{: target="_blank" },
+            [pen odes][5]{: target="_blank" }, &
+            [wax poetic][6]{: target="_blank" }.
+
+            [1]: https://chrome.google.com/webstore/detail/dom-x-ray/olfkgegmjhgehnakignkabhbdchkhnkj "DOM X-Ray Google Chrome Extension"
+            [2]: # "Toggle the DOM X-Ray demo"
+            [3]: https://instagram.com/sixftdwarf "Instagram"
+            [4]: https://youtube.com/sixftdwarf "YouTube"
+            [5]: https://annumford.bandcamp.com "Bandcamp"
+            [6]: http://sixfootdwarf.com "WordPress"
+
+    javascript:
+      const html = document.documentElement;
+      const toggle = document.getElementById('toggle-demo');
+
+      toggle.addEventListener('click', toggleDOMXRay);
+
+      function toggleDOMXRay(e) {
+        e.preventDefault();
+
+        if (html.id === 'dom-x-ray') {
+          html.id = '';
+        } else {
+          html.id = 'dom-x-ray';
+        }
+      }

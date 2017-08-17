@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const slim = require("gulp-slim");
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
@@ -12,6 +13,15 @@ gulp.task('browserSync', function() {
     }
   })
 })
+
+gulp.task('templates', function() {
+  gulp.src('src/slim/*.slim')
+    .pipe(slim())
+    .pipe(gulp.dest('./dist/'))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
+});
 
 gulp.task('styles', function() {
   gulp.src('src/scss/styles.scss')
@@ -28,7 +38,7 @@ gulp.task('styles', function() {
     }));
 });
 
-gulp.task('default', ['browserSync', 'styles'], function() {
+gulp.task('default', ['browserSync', 'templates', 'styles'], function() {
   gulp.watch('src/scss/**/*.scss', ['styles']);
-  gulp.watch('dist/*.html', browserSync.reload);
+  gulp.watch('src/slim/*.slim', ['templates']);
 });

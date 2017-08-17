@@ -19,6 +19,10 @@ p,
 ul,
 li {
   margin-bottom: 1.5em;
+
+  header & {
+    margin-bottom: 0;
+  }
 }
 
 strong {
