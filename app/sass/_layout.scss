@@ -17,3 +17,57 @@ section {
 header {
   text-align: center;
 }
+
+.col-1,
+.col-2 {
+  max-width: 30em;
+  margin: 0 auto;
+}
+
+.col-1 {
+  border-top: 1px solid #d8d8d8;
+  padding: 2em 0;
+
+  header & {
+    border-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media ( min-width: 420px ) {
+  body {
+    padding: 2em;
+  }
+
+  header,
+  section {
+    margin-bottom: 2em;
+  }
+}
+
+@media ( min-width: 704px ) {
+  header,
+  section {
+    display: flex;
+  }
+
+  .col-1,
+  .col-2 {
+    flex: 0 0 auto;
+    margin: 0;
+  }
+
+  .col-1 {
+    width: 10em;
+    text-align: right;
+    padding: 0 2em 0 0;
+    border-top: 0;
+    border-right: 1px solid #d8d8d8;
+  }
+
+  .col-2 {
+    width: 30em;
+    text-align: left;
+    padding-left: 2em;
+  }
+}
