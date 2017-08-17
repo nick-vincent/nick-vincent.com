@@ -5,6 +5,85 @@ html {
 body {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: $font-size-base;
   line-height: 1.5;
+  background-color: $color-almost-white;
+  color: $color-almost-black;
+}
+
+p,
+ul,
+li {
+  margin-bottom: 1.5em;
+}
+
+strong {
+  font-weight: 500;
+}
+
+a {
+  position: relative;
+  color: $color-primary-blue;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 50%,
+      $color-primary-blue 50%,
+      $color-primary-blue 100%
+    );
+  }
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1;
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  color: $color-darker-grey;
+}
+
+h2 {
+  font-size: 0.75em;
+  font-weight: 500;
+  line-height: 2;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-medium-grey;
+
+  @media ( min-width: 704px ) {
+    text-align: right;
+  }
+}
+
+h3 {
+  font-size: 1em;
+  line-height: 1.5;
+  font-weight: 500;
+  color: $color-darker-grey;
+}
+
+.position,
+.degree {
+  display: block;
+  color: $color-dark-grey;
+  font-size: px-to-em(14px);
+  line-height: px-to-em(24px, 14px);
+}
+
+.position {
+  margin-bottom: 0;
 }

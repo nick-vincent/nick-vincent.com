@@ -68,7 +68,7 @@ header {
   margin: 0 auto; }
 
 .col-1 {
-  border-top: 1px solid #d8d8d8;
+  border-top: 1px solid #D8D8D8;
   padding: 2em 0; }
   header .col-1 {
     border-top: 0;
@@ -98,7 +98,7 @@ header {
     text-align: right;
     padding: 0 2em 0 0;
     border-top: 0;
-    border-right: 1px solid #d8d8d8; }
+    border-right: 1px solid #D8D8D8; }
   .col-2 {
     width: 30em;
     text-align: left;
@@ -114,7 +114,70 @@ body {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
   font-size: 16px;
-  line-height: 1.5; }
+  line-height: 1.5;
+  background-color: #F8F8F8;
+  color: #111111; }
+
+p,
+ul,
+li {
+  margin-bottom: 1.5em; }
+
+strong {
+  font-weight: 500; }
+
+a {
+  position: relative;
+  color: #3388BB;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap; }
+  a:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), color-stop(50%, #3388BB), to(#3388BB));
+    background: linear-gradient(to bottom, transparent 0%, transparent 50%, #3388BB 50%, #3388BB 100%); }
+
+h1 {
+  font-size: 3em;
+  line-height: 1;
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  color: #333333; }
+
+h2 {
+  font-size: 0.75em;
+  font-weight: 500;
+  line-height: 2;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #999999; }
+  @media (min-width: 704px) {
+    h2 {
+      text-align: right; } }
+
+h3 {
+  font-size: 1em;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #333333; }
+
+.position,
+.degree {
+  display: block;
+  color: #666666;
+  font-size: 0.875em;
+  line-height: 1.71429em; }
+
+.position {
+  margin-bottom: 0; }
 
 #dom-x-ray, #dom-x-ray:before, #dom-x-ray:after,
 #dom-x-ray *, #dom-x-ray *:before, #dom-x-ray *:after {
