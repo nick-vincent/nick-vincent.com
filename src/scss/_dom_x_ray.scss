@@ -1,6 +1,10 @@
 #dom-x-ray {
-  &, &:before, &:after,
-  *, *:before, *:after {
+  &,
+  &:before,
+  &:after,
+  *,
+  *:before,
+  *:after {
     color: rgba(hotpink, 1) !important;
     border-color: rgba(hotpink, 1) !important;
     background-color: rgba(lightskyblue, 0.03) !important;

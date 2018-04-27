@@ -3,9 +3,9 @@
   height: 100px;
   border-radius: 50%;
   backface-visibility: false;
-  transition: transform .5s cubic-bezier(0.680, -0.550, 0.265, 1.550) .05s;
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.05s;
 
   header:hover & {
-    transform: translate3d( 0, 0, 0 ) scale(1.1) rotate(15deg);
+    transform: translate3d(0, 0, 0) scale(1.1) rotate(15deg);
   }
 }
