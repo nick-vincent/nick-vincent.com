@@ -2,95 +2,101 @@ doctype html
 html lang="en"
   head
     meta charset="utf-8"
-    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
     meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"
-    title Nick Vincent, User-Centered Design &amp; Development
-    meta name="description" content="Resumé of Nick Vincent. Over 14 years of user-centered design & development."
+    title Nick Vincent: Fluent in both design &amp; code
     link href="css/styles.css" media="all" rel="stylesheet" type="text/css"
-    link href="https://fonts.googleapis.com/css?family=Ubuntu:300,500" rel="stylesheet" type="text/css"
     link href="favicon.ico" rel="icon" type="image/png"
 
   body
-    article#resume
+    article
+      header role="banner"
+        markdown:
+          # Nick Vincent
 
-      header#contact
-        .col-1
-          img.photo src="img/photo.jpg" alt="Nick" height="100" width="100"
-        .col-2
+          Fluent in both design & code \\
+          <the.nick.vincent@gmail.com>
+
+      main role="main"
+        section#expertise
           markdown:
-            # Nick Vincent
+            ## Expertise
 
-            User-centered design & development
+            Markup maestro \\
+            Stylesheet sculptor \\
+            Javascript gymnast
 
-            <the.nick.vincent@gmail.com>
+            Interface iterationist \\
+            Component curator \\
+            Design system devotee
 
-      section#expertise
-        .col-1
-          h2 Expertise
-        .col-2
+            End-user empath \\
+            Accessibility advocate \\
+            Interaction inclusivist
+
+            Typographic tinkerer \\
+            Moonlight motionographer \\
+            Bearer of the brand torch
+
+            Prefers work to speak for itself
+
+        section#experience
           markdown:
-            {: .flex }
-            - Design
-            - Branding
-            - Typography
-            - Motion
-            - Code
-            - Markup
-            - Stylesheets
-            - Interaction
-            - Agile
-            - Scrum
-            - Git
-            - Rails
+            ## Experience
 
-      section#experience
-        .col-1
-          h2 Experience
-        .col-2
-          markdown:
-            - ### [Square, Inc.][1]{: target="_blank" } Economic Empowerment
+            - ### [Square, Inc.][1]{: target="_blank" }
               {: #square }
 
+              Frontend Engineer
               {: .position }
-              Front-End Engineer, Apr 2014 – Present
 
-              {: .bulleted }
-              - Author of styles & javascript framework powering the
-              front-end of marketing website and other public-facing apps
-              - Front-end lead for marketing website CMS integration
-              - Built out front-end for hardware e-commerce website
+              Apr 2014 – Present
+              {: .date }
 
-            - ### [Zappos.com][2]{: target="_blank" } Innovation Lab
+              Author of frontend design framework powering marketing website & public-facing apps
+
+              Frontend lead for marketing website CMS integration
+
+              Frontend lead for hardware e-commerce website build
+
+            - ### [Zappos Labs][2]{: target="_blank" }
               {: #zappos }
 
+              Senior Developer
               {: .position }
-              Senior Developer, May 2011 – Apr 2014
 
-              {: .bulleted }
-              - Rebranded Zappos Labs website with a focus on recruiting
-              - Built Zappos Top Pins with Pinterest API launch partnership
-              - Evolved the branding &amp; design of curated fashion microsite
-              - Won hackathon with web app to search by image &amp; color
+              May 2011 – Apr 2014
+              {: .date }
 
-            - ### [Self-Employed][3]{: target="_blank" } Freelance Work
+              Lead UX design & UI coding on various e-commerce experiments
+
+            - ### [Self-Employed][3]{: target="_blank" }
               {: #self-employed }
 
+              Freelance client work
               {: .position }
-              UX Design & Development, Apr 2010 – May 2011
 
-            - ### [R&R Partners][4]{: target="_blank" } Advertising Agency
+              Apr 2010 – May 2011
+              {: .date }
+
+            - ### [R&R Partners][4]{: target="_blank" }
               {: #rrpartners }
 
+              Web Developer
               {: .position }
-              Web Developer, Apr 2009 – Apr 2010
 
-            - ### [Eatdrink][5]{: target="_blank" } Boutique Creative Agency
+              Apr 2009 – Apr 2010
+              {: .date }
+
+            - ### [Eatdrink][5]{: target="_blank" }
               {: #eatdrink }
 
+              Web / Interactive Lead \\
+              Web Designer / Developer \\
+              Web Intern
               {: .position }
-              Web / Interactive Lead, Mar 2006 – Mar 2009 \\
-              Web Designer / Developer, Sep 2003 – Mar 2006 \\
-              Web Intern, Mar 2003 – Sep 2003
+
+              Mar 2003 – Mar 2009
+              {: .date }
 
             [1]: https://squareup.com "Square, Inc."
             [2]: https://www.zappos.com "Zappos.com"
@@ -98,55 +104,85 @@ html lang="en"
             [4]: https://www.rrpartners.com "R&R Partners"
             [5]: http://www.eatdrink.com "Eatdrink"
 
-      section#education
-        .col-1
-          h2 Education
-        .col-2
+        section#education
           markdown:
-            ### Bachelor of Arts in Computer Science
+            ## Education
 
-            {: .degree }
-            University of Nevada, Las Vegas, Dec 2005
+            - ### Bachelor of Arts <span class='no-wrap'>in Computer Science</span>
 
-            ### Associate of Applied Science in Web Design
+              University of Nevada, <span class='no-wrap'>Las Vegas</span>
+              {: .college }
 
-            {: .degree }
-            College of Southern Nevada, Dec 2003
+              Dec 2005
+              {: .date }
 
-      section#etcetera
-        .col-1
-          h2 Etcetera
-        .col-2
+            - ### Associate of Applied Science <span class='no-wrap'>in Web Design</span>
+
+              College of Southern Nevada
+              {: .college }
+
+              Dec 2003
+              {: .date }
+
+        section#etcetera
           markdown:
-            I made [DOM X-Ray][1]{: target="_blank" },
-            a dev tool to see through the DOM.
-            [Demo it here!][2]{: #toggle-demo.no-print }
+            ## Etcetera
 
-            I’m also known to: \\
-            [snap photos][3]{: target="_blank" },
-            [strum tunes][4]{: target="_blank" },
-            [pen odes][5]{: target="_blank" }, &
-            [wax poetic][6]{: target="_blank" }.
+            I made [DOM X-Ray][1]{: target="_blank" }, \\
+            a dev tool to see \\
+            through the DOM. \\
+            [Demo it!][2]{: #dom-xray-demo.no-print }
+
+            I’m also known to:
+
+            - [snap photos][3]{: target="_blank" }
+            - [strum tunes][4]{: target="_blank" }
+            - [pen odes][5]{: target="_blank" }
+            - [wax poetic][6]{: target="_blank" }
+            {: .bullet }
+
+            This webpage features:
+
+            - [CSS Grids][7]{: target="_blank" }
+            - [System Fonts][8]{: target="_blank" }
+            - [Dark Mode][9]{: target="_blank" }
+              <span class="no-print">- [Demo it!][10]{: #dark-mode-demo.no-print }</span>
+            {: .bullet }
 
             [1]: https://chrome.google.com/webstore/detail/dom-x-ray/olfkgegmjhgehnakignkabhbdchkhnkj "DOM X-Ray Google Chrome Extension"
             [2]: # "Toggle the DOM X-Ray demo"
             [3]: https://instagram.com/sixftdwarf "Instagram"
             [4]: https://youtube.com/sixftdwarf "YouTube"
-            [5]: https://annumford.bandcamp.com "Bandcamp"
+            [5]: http://annumford.com "Bandcamp"
             [6]: http://sixfootdwarf.com "WordPress"
+            [7]: https://css-tricks.com/snippets/css/complete-guide-grid/ "Read about CSS Grids"
+            [8]: https://css-tricks.com/snippets/css/system-font-stack/ "Read about System Fonts"
+            [9]: https://css-tricks.com/dark-modes-with-css/ "Read about Dark Mode"
+            [10]: # "Toggle Dark Mode"
+
 
     javascript:
-      const html = document.documentElement;
-      const toggle = document.getElementById('toggle-demo');
+      const domXrayDemo = document.getElementById('dom-xray-demo');
+      const darkModeDemo = document.getElementById('dark-mode-demo');
 
-      toggle.addEventListener('click', toggleDOMXRay);
+      document.getElementById('dom-xray-demo')
+        .addEventListener('click', function(e) {
+          e.preventDefault();
 
-      function toggleDOMXRay(e) {
-        e.preventDefault();
+          if (document.documentElement.id === 'dom-x-ray') {
+            document.documentElement.id = '';
+          } else {
+            document.documentElement.id = 'dom-x-ray';
+          }
+        });
 
-        if (html.id === 'dom-x-ray') {
-          html.id = '';
-        } else {
-          html.id = 'dom-x-ray';
-        }
-      }
+      document.getElementById('dark-mode-demo')
+        .addEventListener('click', function(e) {
+          e.preventDefault();
+
+          if (document.documentElement.classList.contains('inverse-mode')) {
+            document.documentElement.classList.remove('inverse-mode');
+          } else {
+            document.documentElement.classList.add('inverse-mode');
+          }
+        });

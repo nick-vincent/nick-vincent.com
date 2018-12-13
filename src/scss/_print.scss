@@ -1,6 +1,39 @@
 @media print {
-  body {
+  @page {
+    margin: 0.5in;
+    size: 100%;
+  }
+
+  html {
+    color: black;
     background-color: white;
+  }
+
+  body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    font-size: 8pt;
+  }
+
+  article {
+    max-width: none;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+
+  header {
+    padding: 2em 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  a {
+    text-decoration: none;
   }
 
   .no-print {

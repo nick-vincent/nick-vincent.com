@@ -5,69 +5,57 @@
 }
 
 body {
-  padding: 1em;
-  min-width: 320px;
+  min-width: $body-min-width;
+  max-width: $body-max-width;
+  margin: auto;
 }
 
-header,
-section {
-  margin-bottom: 3em;
+article {
+  padding: 2em;
+  margin: 0 auto;
+
+  @media (min-width: $breakpoint-2-column) {
+    padding: 4em;
+  }
 }
 
 header {
-  text-align: center;
+  display: grid;
+  grid-column-gap: 2em;
+  grid-template-columns: 1fr;
+  align-items: end;
+  padding: 4em 0 2em;
+  border-top-style: solid;
+  border-top-width: 0.75em;
+
+  @media (min-width: $breakpoint-2-column) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $breakpoint-4-column) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
-.col-1,
-.col-2 {
-  max-width: 30em;
-  margin: 0 auto;
+main {
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $breakpoint-2-column) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (min-width: $breakpoint-4-column) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
-.col-1 {
-  border-top: 1px solid $color-lighter-grey;
+section {
   padding: 2em 0;
+  border-top-style: solid;
+  border-top-width: 0.25em;
 
-  header & {
-    border-top: 0;
+  @supports (display: grid) {
     padding-bottom: 0;
-  }
-}
-
-@media (min-width: 420px) {
-  body {
-    padding: 2em;
-  }
-
-  header,
-  section {
-    margin-bottom: 2em;
-  }
-}
-
-@media (min-width: 704px) {
-  header,
-  section {
-    display: flex;
-  }
-
-  .col-1,
-  .col-2 {
-    flex: 0 0 auto;
-    margin: 0;
-  }
-
-  .col-1 {
-    width: 10em;
-    text-align: right;
-    padding: 0 2em 0 0;
-    border-top: 0;
-    border-right: 1px solid $color-lighter-grey;
-  }
-
-  .col-2 {
-    width: 30em;
-    text-align: left;
-    padding-left: 2em;
   }
 }
