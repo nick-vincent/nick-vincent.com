@@ -7,6 +7,16 @@ html lang="en"
     link href="css/styles.css" media="all" rel="stylesheet" type="text/css"
     link href="favicon.ico" rel="icon" type="image/png"
 
+    script(
+      async
+      src = "https://www.googletagmanager.com/gtag/js?id=UA-133459674-1"
+    )
+    javascript:
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-133459674-1');
+
   body
     article
       header role="banner"
