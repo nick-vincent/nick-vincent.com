@@ -1,51 +1,64 @@
-const gulp = require('gulp');
+const gulp = require("gulp");
+
+const autoprefixer = require("autoprefixer");
+const browserSync = require("browser-sync");
+const cleanCSS = require("gulp-clean-css");
+const htmlnano = require("gulp-htmlnano");
+const obfuscate = require("posthtml-obfuscate");
+const postcss = require("gulp-postcss");
+const posthtml = require("gulp-posthtml");
+const sass = require("gulp-sass");
 const slim = require("gulp-slim");
-const sass = require('gulp-sass');
-const postcss = require('gulp-postcss');
-const autoprefixer = require('autoprefixer');
-const browserSync = require('browser-sync').create();
-const cleanCSS = require('gulp-clean-css');
-const posthtml = require('gulp-posthtml');
-const obfuscate = require('posthtml-obfuscate');
-const htmlnano = require('gulp-htmlnano');
 
-gulp.task('browserSync', function() {
-  browserSync.init({
-    server: {
-      baseDir: 'dist'
-    }
-  })
-})
+const server = browserSync.create();
 
-gulp.task('templates', function() {
-  gulp.src('src/slim/*.slim')
+function reload(done) {
+  server.reload();
+  done();
+}
+
+function serve(done) {
+  server.init({
+    server: { baseDir: "dist" }
+  });
+  done();
+}
+
+function templates() {
+  return gulp
+    .src("src/slim/*.slim")
     .pipe(slim())
     .pipe(posthtml([obfuscate()]))
-    .pipe(htmlnano({
-      collapseWhitespace: 'conservative'
-    }))
-    .pipe(gulp.dest('./dist/'))
-    .pipe(browserSync.reload({
-      stream: true
-    }));
-});
-
-gulp.task('styles', function() {
-  gulp.src('src/scss/styles.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(postcss([
-      autoprefixer({
-        browsers: ['last 2 version']
+    .pipe(
+      htmlnano({
+        collapseWhitespace: "conservative"
       })
-    ]))
-    .pipe(cleanCSS())
-    .pipe(gulp.dest('./dist/css/'))
-    .pipe(browserSync.reload({
-      stream: true
-    }));
-});
+    )
+    .pipe(gulp.dest("./dist/"));
+}
 
-gulp.task('default', ['browserSync', 'templates', 'styles'], function() {
-  gulp.watch('src/scss/**/*.scss', ['styles']);
-  gulp.watch('src/slim/*.slim', ['templates']);
-});
+function styles() {
+  return gulp
+    .src("src/scss/styles.scss")
+    .pipe(sass().on("error", sass.logError))
+    .pipe(
+      postcss([
+        autoprefixer({
+          browsers: ["last 2 version"]
+        })
+      ])
+    )
+    .pipe(cleanCSS())
+    .pipe(gulp.dest("./dist/css/"))
+    .pipe(server.stream());
+}
+
+function watch() {
+  gulp.watch("src/slim/*.slim", gulp.series(templates, reload));
+  gulp.watch("src/scss/**/*.scss", styles);
+}
+
+gulp.task(
+  "default",
+  gulp.series(gulp.parallel(templates, styles), serve, watch)
+);
