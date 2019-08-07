@@ -41,13 +41,7 @@ function styles() {
   return gulp
     .src("src/scss/styles.scss")
     .pipe(sass().on("error", sass.logError))
-    .pipe(
-      postcss([
-        autoprefixer({
-          browsers: ["last 2 version"]
-        })
-      ])
-    )
+    .pipe(postcss([autoprefixer()]))
     .pipe(cleanCSS())
     .pipe(gulp.dest("./dist/css/"))
     .pipe(server.stream());

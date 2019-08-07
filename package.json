@@ -1,6 +1,7 @@
 {
   "name": "nick-vincent.com",
   "version": "1.0.0",
+  "browserslist": ["last 2 version"],
   "devDependencies": {
     "autoprefixer": "^9.6.1",
     "browser-sync": "^2.26.7",
