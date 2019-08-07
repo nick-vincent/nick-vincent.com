@@ -3,10 +3,8 @@
   "version": "1.0.0",
   "devDependencies": {
     "autoprefixer": "^9.6.1",
-    "axios": "^0.19.0",
     "browser-sync": "^2.26.7",
     "debug": "^4.1.1",
-    "fstream": "^1.0.12",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.2.0",
     "gulp-htmlnano": "^0.1.0",
@@ -14,9 +12,6 @@
     "gulp-posthtml": "^3.0.4",
     "gulp-sass": "^4.0.2",
     "gulp-slim": "^0.3.0",
-    "lodash": "^4.17.15",
-    "lodash.template": "^4.5.0",
-    "posthtml-obfuscate": "^0.1.5",
-    "tar": "^4.4.10"
+    "posthtml-obfuscate": "^0.1.5"
   }
 }
