@@ -1,0 +1,23 @@
+a {
+  text-decoration: none;
+
+  @media (hover: hover) {
+    &::after {
+      content: "\2192";
+      pointer-events: none;
+      display: inline;
+      position: absolute;
+      font-weight: 400;
+      opacity: 0;
+      transition: opacity 0.1s $easing-accelerate, transform 0.1s $easing-accelerate;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 1;
+        transform: translateX(0.3em);
+        transition: opacity 0.1s $easing-decelerate, transform 0.1s $easing-decelerate;
+      }
+    }
+  }
+}

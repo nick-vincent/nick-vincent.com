@@ -1,8 +1,49 @@
-$font-size-base: 16px;
-$color-black: #1d1f24;
-
 $body-min-width: 20em;
 $body-max-width: 90em;
 
 $breakpoint-2-column: 44em;
 $breakpoint-4-column: 80em;
+
+$font-size-base: 16px;
+$font-size-h1: 3em;
+$font-size-h2: 1.5em;
+$font-size-h3: 1em;
+
+$article-padding-base: 2em;
+$article-padding-large: 4em;
+
+$header-border-width: 0.75em;
+$header-padding-top-base: 3em;
+$header-padding-bottom-base: 2em;
+$header-padding-top-large: 4em;
+$header-padding-bottom-large: 3em;
+
+$section-border-width: 0.25em;
+$section-padding-top-base: 2em;
+
+$color-light-bg: #f5f8fa;
+$color-light-gradient-light: $color-light-bg;
+$color-light-gradient-dark: #dfebfc;
+$color-light-text: #24487d;
+$color-light-border: #cbdefa;
+$color-light-link: #4588ed;
+$color-light-h1: #22365b;
+$color-light-h2: #6a8abc;
+$color-light-date: #567ab3;
+$color-light-bullet: #9cc0f5;
+$color-light-arrow: #9cc0f5;
+
+$color-dark-bg: #171a1f;
+$color-dark-gradient-light: $color-dark-bg;
+$color-dark-gradient-dark: #080b10;
+$color-dark-text: #d0d4e1;
+$color-dark-border: #212e3a;
+$color-dark-link: #5ea7ff;
+$color-dark-h1: white;
+$color-dark-h2: #647890;
+$color-dark-date: #8796a3;
+$color-dark-bullet: #3f4c59;
+$color-dark-arrow: #3f4c59;
+
+$easing-decelerate: cubic-bezier(0.0, 0.0, 0.2, 1);
+$easing-accelerate: cubic-bezier(0.4, 0.0, 1, 1);

@@ -1,31 +1,11 @@
 html {
   text-size-adjust: 100%;
-  color: $color-black;
-  background-color: white;
-  transition: color 0.5s ease, background-color 1s ease;
-
-  &.inverse-mode {
-    color: white;
-    background-color: $color-black;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color: white;
-    background-color: $color-black;
-
-    &.inverse-mode {
-      color: $color-black;
-      background-color: white;
-    }
-  }
 }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.5;
   font-size: $font-size-base;
 }
@@ -48,46 +28,43 @@ li {
 }
 
 ul.bullet {
-  list-style: disc;
-  list-style-position: inside;
+  list-style: none;
   margin-bottom: 1.5em;
 
   > li {
     margin-bottom: 0;
-  }
-}
 
-a {
-  position: relative;
-  color: inherit;
-
-  &:hover {
-    text-decoration: none;
+    &::before {
+      content: "\2022";
+      display: inline-block;
+      width: 1em;
+    }
   }
 }
 
 h1 {
-  font-size: 3em;
+  font-size: $font-size-h1;
   line-height: 1;
   font-weight: 600;
   letter-spacing: -0.025em;
 }
 
 h2 {
-  font-size: 1.5em;
-  font-weight: 600;
+  font-size: $font-size-h2;
+  font-weight: 700;
   margin-bottom: 1em;
 }
 
 h3 {
-  font-size: 1em;
-  font-weight: 600;
+  font-size: $font-size-h3;
+  font-weight: 700;
 }
 
 .date {
   font-size: 0.75em;
   line-height: 2;
   text-transform: uppercase;
+  letter-spacing: .05em;
 }
 
 .no-wrap {

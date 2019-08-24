@@ -11,11 +11,11 @@ body {
 }
 
 article {
-  padding: 2em;
+  padding: $article-padding-base;
   margin: 0 auto;
 
   @media (min-width: $breakpoint-2-column) {
-    padding: 4em;
+    padding: $article-padding-large;
   }
 }
 
@@ -24,11 +24,12 @@ header {
   grid-column-gap: 2em;
   grid-template-columns: 1fr;
   align-items: end;
-  padding: 4em 0 2em;
+  padding: $header-padding-top-base 0 $header-padding-bottom-base;
   border-top-style: solid;
-  border-top-width: 0.75em;
+  border-top-width: $header-border-width;
 
   @media (min-width: $breakpoint-2-column) {
+    padding: $header-padding-top-large 0 $header-padding-bottom-large;
     grid-template-columns: 1fr 1fr;
   }
 
@@ -51,9 +52,9 @@ main {
 }
 
 section {
-  padding: 2em 0;
+  padding: $section-padding-top-base 0;
   border-top-style: solid;
-  border-top-width: 0.25em;
+  border-top-width: $section-border-width;
 
   @supports (display: grid) {
     padding-bottom: 0;

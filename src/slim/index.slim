@@ -2,7 +2,7 @@ doctype html
 html lang="en"
   head
     meta charset="utf-8"
-    meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"
+    meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"
     title Nick Vincent: Fluent in both design &amp; code
     link href="css/styles.css" media="all" rel="stylesheet" type="text/css"
     link href="favicon.ico" rel="icon" type="image/png"
@@ -62,7 +62,7 @@ html lang="en"
               Apr 2014 – Present
               {: .date }
 
-              Author of frontend design framework powering marketing website & public-facing apps
+              Author of frontend design framework powering marketing website & public-facing sites
 
               Frontend lead for marketing website CMS integration
 
@@ -138,61 +138,57 @@ html lang="en"
           markdown:
             ## Etcetera
 
-            I made [DOM X-Ray][1]{: target="_blank" }, \\
+            I made [DOM X-Ray][1]{: target="_blank" } \\
             a dev tool to see \\
-            through the DOM. \\
-            [Demo it!][2]{: #dom-xray-demo.no-print }
+            through the DOM
 
             I’m also known to:
 
-            - [snap photos][3]{: target="_blank" }
-            - [strum tunes][4]{: target="_blank" }
-            - [pen odes][5]{: target="_blank" }
-            - [wax poetic][6]{: target="_blank" }
+            - [snap photos][2]{: target="_blank" }
+            - [strum tunes][3]{: target="_blank" }
+            - [pen odes][4]{: target="_blank" }
+            - [wax poetic][5]{: target="_blank" }
             {: .bullet }
 
             This webpage features:
 
-            - [CSS Grids][7]{: target="_blank" }
-            - [System Fonts][8]{: target="_blank" }
-            - [Dark Mode][9]{: target="_blank" }
-              <span class="no-print">- [Demo it!][10]{: #dark-mode-demo.no-print }</span>
+            - [CSS grids][6]{: target="_blank" }
+            - [system fonts][7]{: target="_blank" }
+            - [dark mode][8]{: target="_blank" }
             {: .bullet }
 
-            [1]: https://chrome.google.com/webstore/detail/dom-x-ray/olfkgegmjhgehnakignkabhbdchkhnkj "DOM X-Ray Google Chrome Extension"
-            [2]: # "Toggle the DOM X-Ray demo"
-            [3]: https://instagram.com/sixftdwarf "Instagram"
-            [4]: https://youtube.com/sixftdwarf "YouTube"
-            [5]: http://annumford.com "Bandcamp"
-            [6]: http://sixfootdwarf.com "WordPress"
-            [7]: https://css-tricks.com/snippets/css/complete-guide-grid/ "Read about CSS Grids"
-            [8]: https://css-tricks.com/snippets/css/system-font-stack/ "Read about System Fonts"
-            [9]: https://css-tricks.com/dark-modes-with-css/ "Read about Dark Mode"
-            [10]: # "Toggle Dark Mode"
+            While you're here, you can:
+            {: .no-print }
 
+            - [demo DOM X-Ray](#){: #dom-xray-demo }
+            - [toggle dark mode](#){: #dark-mode-demo }
+            - [print this page](#){: #print-page }
+            {: .bullet.no-print }
+
+            [1]: https://chrome.google.com/webstore/detail/dom-x-ray/olfkgegmjhgehnakignkabhbdchkhnkj "DOM X-Ray Google Chrome Extension"
+            [2]: https://instagram.com/sixftdwarf "Instagram"
+            [3]: https://youtube.com/sixftdwarf "YouTube"
+            [4]: http://annumford.com "Bandcamp"
+            [5]: https://sixfootdwarf.com "WordPress"
+            [6]: https://css-tricks.com/snippets/css/complete-guide-grid/ "Read about CSS Grids"
+            [7]: https://css-tricks.com/snippets/css/system-font-stack/ "Read about System Fonts"
+            [8]: https://css-tricks.com/dark-modes-with-css/ "Read about Dark Mode"
 
     javascript:
-      const domXrayDemo = document.getElementById('dom-xray-demo');
-      const darkModeDemo = document.getElementById('dark-mode-demo');
-
       document.getElementById('dom-xray-demo')
         .addEventListener('click', function(e) {
           e.preventDefault();
-
-          if (document.documentElement.id === 'dom-x-ray') {
-            document.documentElement.id = '';
-          } else {
-            document.documentElement.id = 'dom-x-ray';
-          }
+          document.documentElement.classList.toggle('dom-x-ray');
         });
 
       document.getElementById('dark-mode-demo')
         .addEventListener('click', function(e) {
           e.preventDefault();
+          document.documentElement.classList.toggle('inverse-mode');
+        });
 
-          if (document.documentElement.classList.contains('inverse-mode')) {
-            document.documentElement.classList.remove('inverse-mode');
-          } else {
-            document.documentElement.classList.add('inverse-mode');
-          }
+      document.getElementById('print-page')
+        .addEventListener('click', function(e) {
+          e.preventDefault();
+          window.print()
         });

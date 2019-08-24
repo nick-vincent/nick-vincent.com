@@ -1,0 +1,167 @@
+@mixin html-light {
+  color: $color-light-text;
+  background-color: $color-light-bg;
+  &::before {
+    background-image: radial-gradient(
+      circle farthest-corner at top center,
+      $color-light-gradient-light 75%,
+      $color-light-gradient-dark 100%
+    );
+  }
+}
+
+@mixin html-dark {
+  color: $color-dark-text;
+  background-color: $color-dark-bg;
+  &::before {
+    background-image: radial-gradient(
+      circle farthest-corner at top center,
+      $color-dark-gradient-light 75%,
+      $color-dark-gradient-dark 100%
+    );
+  }
+}
+
+html {
+  // background-attachment fixed not working in iOS
+  &::before {
+    content: '';
+    pointer-events: none;
+    z-index: -1;
+    display: block;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  @include html-light;
+
+  &.inverse-mode {
+    @include html-dark;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    @include html-dark;
+
+    &.inverse-mode {
+      @include html-light;
+    }
+  }
+}
+
+header,
+section {
+  border-color: $color-light-border;
+
+  .inverse-mode & {
+    border-color: $color-dark-border;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    border-color: $color-dark-border;
+
+    .inverse-mode & {
+      border-color: $color-light-border;
+    }
+  }
+}
+
+a {
+  color: $color-light-link;
+
+  &::after {
+    color: $color-light-arrow;
+  }
+
+  .inverse-mode & {
+    color: $color-dark-link;
+
+    &::after {
+      color: $color-dark-arrow;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: $color-dark-link;
+
+    &::after {
+      color: $color-dark-arrow;
+    }
+
+    .inverse-mode & {
+      color: $color-light-link;
+
+      &::after {
+        color: $color-light-arrow;
+      }
+    }
+  }
+}
+
+h1 {
+  color: $color-light-h1;
+
+  .inverse-mode & {
+    color: $color-dark-h1;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: $color-dark-h1;
+
+    .inverse-mode & {
+      color: $color-light-h1;
+    }
+  }
+}
+
+h2 {
+  color: $color-light-h2;
+
+  .inverse-mode & {
+    color: $color-dark-h2;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: $color-dark-h2;
+
+    .inverse-mode & {
+      color: $color-light-h2;
+    }
+  }
+}
+
+ul.bullet {
+  > li {
+    &::before {
+      color: $color-light-bullet;
+
+      .inverse-mode & {
+        color: $color-dark-bullet;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        color: $color-dark-bullet;
+
+        .inverse-mode & {
+          color: $color-light-bullet;
+        }
+      }
+    }
+  }
+}
+
+.date {
+  color: $color-light-date;
+
+  .inverse-mode & {
+    color: $color-dark-date;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: $color-dark-date;
+
+    .inverse-mode & {
+      color: $color-light-date;
+    }
+  }
+}
