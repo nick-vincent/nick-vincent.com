@@ -1,9 +1,7 @@
-a {
-  text-decoration: none;
-
+a,
+button {
   @media (hover: hover) {
     &::after {
-      content: "\2192";
       pointer-events: none;
       display: inline;
       position: absolute;
@@ -19,5 +17,31 @@ a {
         transition: opacity 0.1s $easing-decelerate, transform 0.1s $easing-decelerate;
       }
     }
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &::after {
+    content: "\2192";
+  }
+}
+
+button {
+  display: inline;
+  appearance: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+
+  &:active {
+    outline: none;
+  }
+
+  &::after {
+    content: "#";
   }
 }

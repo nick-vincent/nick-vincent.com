@@ -162,9 +162,9 @@ html lang="en"
             While you're here, you can:
             {: .no-print }
 
-            - [demo DOM X-Ray](#){: #dom-xray-demo }
-            - [toggle dark mode](#){: #dark-mode-demo }
-            - [print this page](#){: #print-page }
+            - <button id='demo-dom-xray'>demo DOM X-Ray</button>
+            - <button id='demo-dark-mode'>toggle dark mode</button>
+            - <button id='print-page'>print this page</button>
             {: .bullet.no-print }
 
             [1]: https://chrome.google.com/webstore/detail/dom-x-ray/olfkgegmjhgehnakignkabhbdchkhnkj "DOM X-Ray Google Chrome Extension"
@@ -177,20 +177,23 @@ html lang="en"
             [8]: https://css-tricks.com/dark-modes-with-css/ "Read about Dark Mode"
 
     javascript:
-      document.getElementById('dom-xray-demo')
+      document.getElementById('demo-dom-xray')
         .addEventListener('click', function(e) {
           e.preventDefault();
+          e.target.blur();
           document.documentElement.classList.toggle('dom-x-ray');
         });
 
-      document.getElementById('dark-mode-demo')
+      document.getElementById('demo-dark-mode')
         .addEventListener('click', function(e) {
           e.preventDefault();
+          e.target.blur();
           document.documentElement.classList.toggle('inverse-mode');
         });
 
       document.getElementById('print-page')
         .addEventListener('click', function(e) {
           e.preventDefault();
+          e.target.blur();
           window.print()
         });
