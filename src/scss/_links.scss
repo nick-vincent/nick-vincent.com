@@ -23,8 +23,10 @@ button {
 a {
   text-decoration: none;
 
-  &::after {
-    content: "\2192";
+  @media (hover: hover) {
+    &::after {
+      content: "\2192";
+    }
   }
 }
 
@@ -37,11 +39,13 @@ button {
   border: none;
   cursor: pointer;
 
-  &:active {
-    outline: none;
-  }
+  @media (hover: hover) {
+    &:active {
+      outline: none;
+    }
 
-  &::after {
-    content: "#";
+    &::after {
+      content: "#";
+    }
   }
 }
