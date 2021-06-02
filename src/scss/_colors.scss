@@ -1,31 +1,30 @@
 @mixin html-light {
-  color: $color-light-text;
   background-color: $color-light-bg;
+
   &::before {
     background-image: radial-gradient(
       circle farthest-corner at top center,
-      $color-light-gradient-light 75%,
+      $color-light-gradient-light 50%,
       $color-light-gradient-dark 100%
     );
   }
 }
 
 @mixin html-dark {
-  color: $color-dark-text;
   background-color: $color-dark-bg;
+
   &::before {
     background-image: radial-gradient(
       circle farthest-corner at top center,
-      $color-dark-gradient-light 75%,
+      $color-dark-gradient-light 50%,
       $color-dark-gradient-dark 100%
     );
   }
 }
 
 html {
-  // background-attachment fixed not working in iOS
   &::before {
-    content: '';
+    content: "";
     pointer-events: none;
     z-index: -1;
     display: block;
@@ -49,7 +48,24 @@ html {
   }
 }
 
+body {
+  color: $color-light-text;
+
+  .inverse-mode & {
+    color: $color-dark-text;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: $color-dark-text;
+
+    .inverse-mode & {
+      color: $color-light-text;
+    }
+  }
+}
+
 header,
+main,
 section {
   border-color: $color-light-border;
 
@@ -62,6 +78,74 @@ section {
 
     .inverse-mode & {
       border-color: $color-light-border;
+    }
+  }
+}
+
+header {
+  .stripe {
+    background: linear-gradient(
+      to bottom,
+      rgba(#003b89, 0.1),
+      rgba(#003b89, 0.25)
+    );
+
+    .inverse-mode & {
+      background: linear-gradient(
+        to bottom,
+        rgba(#336699, 0.1),
+        rgba(#336699, 0.25)
+      );
+    }
+
+    @media (prefers-color-scheme: dark) {
+      background: linear-gradient(
+        to bottom,
+        rgba(#336699, 0.1),
+        rgba(#336699, 0.25)
+      );
+
+      .inverse-mode & {
+        background: linear-gradient(
+          to bottom,
+          rgba(#003b89, 0.1),
+          rgba(#003b89, 0.25)
+        );
+      }
+    }
+  }
+}
+
+footer {
+  .stripe {
+    background: linear-gradient(
+      to top,
+      rgba(#003b89, 0.1),
+      rgba(#003b89, 0.25)
+    );
+
+    .inverse-mode & {
+      background: linear-gradient(
+        to top,
+        rgba(#336699, 0.1),
+        rgba(#336699, 0.25)
+      );
+    }
+
+    @media (prefers-color-scheme: dark) {
+      background: linear-gradient(
+        to top,
+        rgba(#336699, 0.1),
+        rgba(#336699, 0.25)
+      );
+
+      .inverse-mode & {
+        background: linear-gradient(
+          to top,
+          rgba(#003b89, 0.1),
+          rgba(#003b89, 0.25)
+        );
+      }
     }
   }
 }
@@ -100,6 +184,22 @@ button {
 }
 
 h1 {
+  color: $color-light-h1;
+
+  .inverse-mode & {
+    color: $color-dark-h1;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: $color-dark-h1;
+
+    .inverse-mode & {
+      color: $color-light-h1;
+    }
+  }
+}
+
+h2 {
   color: $color-light-h1;
 
   .inverse-mode & {

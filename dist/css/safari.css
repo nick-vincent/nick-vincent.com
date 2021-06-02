@@ -1,0 +1,18 @@
+/* hack to target safari for adjusted print styles */
+
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    header {
+      padding-bottom: 2em;
+    }
+    header .title {
+      padding-top: 2em;
+    }
+    main {
+      grid-gap: 2em;
+    }
+    section {
+      padding-top: 2em;
+    }
+  }
+}

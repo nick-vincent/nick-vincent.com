@@ -1,19 +1,13 @@
 {
   "name": "nick-vincent.com",
   "version": "1.0.0",
-  "browserslist": [
-    "last 2 version"
-  ],
   "devDependencies": {
-    "autoprefixer": "^9.7.5",
-    "browser-sync": "^2.26.7",
-    "debug": "^4.1.1",
+    "browser-sync": "^2.26.14",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
+    "gulp-dart-sass": "^1.0.2",
     "gulp-htmlnano": "^0.1.0",
-    "gulp-postcss": "^8.0.0",
-    "gulp-posthtml": "^3.0.4",
-    "gulp-sass": "^4.0.2",
+    "gulp-posthtml": "^3.0.5",
     "gulp-slim": "^0.3.0",
     "posthtml-obfuscate": "^0.1.5"
   }
