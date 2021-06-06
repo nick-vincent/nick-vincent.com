@@ -11,52 +11,125 @@ body {
 }
 
 article {
-  padding: $article-padding-base;
   margin: 0 auto;
+  padding: 0 $article-padding-base;
 
   @media (min-width: $breakpoint-2-column) {
-    padding: $article-padding-large;
+    padding: 0 $article-padding-large;
   }
 }
 
-header {
+header,
+section,
+footer {
   display: grid;
   grid-column-gap: 2em;
   grid-template-columns: 1fr;
-  align-items: end;
-  padding: $header-padding-top-base 0 $header-padding-bottom-base;
-  border-top-style: solid;
-  border-top-width: $header-border-width;
 
   @media (min-width: $breakpoint-2-column) {
-    padding: $header-padding-top-large 0 $header-padding-bottom-large;
     grid-template-columns: 1fr 1fr;
   }
 
   @media (min-width: $breakpoint-4-column) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  @media (min-width: $breakpoint-5-column) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+header {
+  grid-row-gap: 1em;
+  align-items: end;
+  padding-bottom: 2em;
+
+  .stripe {
+    height: 8em;
+  }
+
+  .title {
+    padding-top: 1em;
+  }
+
+  @media (min-width: $breakpoint-2-column) {
+    .title {
+      grid-row-start: 2;
+    }
+
+    .blurb {
+      grid-row-start: 2;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: $breakpoint-4-column) {
+    .blurb {
+      grid-column-end: 4;
+    }
+
+    .website-url {
+      grid-row-start: 2;
+      grid-column-start: 4;
+    }
+  }
+
+  @media (min-width: $breakpoint-5-column) {
+    .blurb {
+      grid-column-end: 5;
+    }
+
+    .website-url {
+      grid-column-start: 5;
+    }
   }
 }
 
 main {
   display: grid;
   grid-gap: 2em;
-  grid-template-columns: 1fr;
+  padding-bottom: 4em;
+}
+
+section {
+  grid-row-gap: 1.25em;
+  padding-top: 2em;
+  border-top-style: solid;
+  border-top-width: $section-border-width;
 
   @media (min-width: $breakpoint-2-column) {
     grid-template-columns: 1fr 1fr;
   }
+
   @media (min-width: $breakpoint-4-column) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+
+  @media (min-width: $breakpoint-5-column) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding: 2em 0 0;
+  }
+
+  h2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    @media (min-width: $breakpoint-2-column) {
+      grid-column-end: 3;
+    }
+
+    @media (min-width: $breakpoint-4-column) {
+      grid-column-end: 5;
+    }
+
+    @media (min-width: $breakpoint-5-column) {
+      grid-column-end: 1;
+    }
+  }
 }
 
-section {
-  padding: $section-padding-top-base 0;
-  border-top-style: solid;
-  border-top-width: $section-border-width;
-
-  @supports (display: grid) {
-    padding-bottom: 0;
+footer {
+  .stripe {
+    height: 12em;
   }
 }

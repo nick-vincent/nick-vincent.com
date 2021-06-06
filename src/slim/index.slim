@@ -2,9 +2,11 @@ doctype html
 html lang="en"
   head
     meta charset="utf-8"
-    meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"
+    meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"
     title Nick Vincent: Fluent in both design &amp; code
+    meta name="description" content="The website for Nick Vincent, web designer &amp; developer based in San Francisco, California"
     link href="css/styles.css" media="all" rel="stylesheet" type="text/css"
+    link href="css/safari.css" media="print" rel="stylesheet" type="text/css"
     link href="favicon.ico" rel="icon" type="image/png"
 
     script(
@@ -20,89 +22,96 @@ html lang="en"
   body
     article
       header role="banner"
-        h1#nick-vincent Nick Vincent
-        p
+        .stripe.no-print
+        .title 
+          h1#nick-vincent Nick Vincent
+        p.blurb
           | Fluent in both design &amp; code
           br
-          a href="mailto:the.nick.vincent@gmail.com" the.nick.vincent@gmail.com
+          | Prefers work to speak for itself
+          br 
+          a<> href="mailto:the.nick.vincent@gmail.com" the.nick.vincent@gmail.com
+        p.website-url.print-only
+          a.print-only<> href="https://nick-vincent.com" nick-vincent.com &#8594 
 
       main role="main"
-        section
-          h2#expertise Expertise
-          p
-            | Markup maestro
-            br
-            | Stylesheet sculptor
-            br
-            | Javascript gymnast
-          p
-            | Interface iterationist
-            br
-            | Component curator
-            br
-            | Design system devotee
-          p
-            | End-user empath
-            br
-            | Accessibility advocate
-            br
-            | Interaction inclusivist
-          p
-            | Typographic tinkerer
-            br
-            | Moonlight motionographer
-            br
-            | Bearer of the brand torch
-          p Prefers work to speak for itself
+        section#expertise
+          h2 Expertise
 
-        section
-          h2#experience Experience
+          .column
+            p
+              | Markup maestro
+              br
+              | Stylesheet sculptor
+              br
+              | Javascript gymnast
+          .column
+            p
+              | Interface iterationist
+              br
+              | Component curator
+              br
+              | Design system devotee
+          .column
+            p
+              | End-user empath
+              br
+              | Accessibility advocate
+              br
+              | Interaction inclusivist
+          .column
+            p
+              | Typographic tinkerer
+              br
+              | Moonlight motionographer
+              br
+              | Bearer of the brand torch
 
-          ul
-            li
-              h3#square
-                a href="https://squareup.com" target="_blank" Square, Inc.
-              p.position Frontend Engineer
-              p.date Apr 2014 – Present
-              p Author of frontend design framework powering marketing website & public-facing sites
-              p Frontend lead for marketing website CMS integration
-              p Frontend lead for hardware e-commerce website build
+        section#experience
+          h2 Experience
 
-            li
-              h3#zappos
-                a href="https://www.zappos.com" target="_blank" Zappos Labs
-              p.position Senior Developer
-              p.date May 2011 – Apr 2014
-              p Lead UX design & UI coding on various e-commerce experiments
+          .column
+            h3#square
+              a href="https://squareup.com" target="_blank" rel="noopener" Square, Inc.
+            p.position Frontend Engineer
+            p.date Apr 2014 – Present
+            p Author of frontend design framework powering marketing website & public-facing sites
+            p Frontend lead for marketing website CMS integration
+            p Frontend lead for hardware e-commerce website build
 
-            li
-              h3#self-employed
-                a href="https://nickvincent.carbonmade.com" target="_blank" Self-Employed
-              p.position Freelance client work
-              p.date Apr 2010 – May 2011
+          .column
+            h3#zappos
+              a href="https://www.zappos.com" target="_blank" rel="noopener" Zappos Labs
+            p.position Senior Developer
+            p.date May 2011 – Apr 2014
+            p Lead UX design & UI coding on various e-commerce experiments
 
-            li
-              h3#rrpartners
-                a href="https://www.rrpartners.com" target="_blank" R&R Partners
-              p.position Web Developer
-              p.date Apr 2009 – Apr 2010
+          .column
+            h3#self-employed
+              a href="https://nickvincent.carbonmade.com" target="_blank" rel="noopener" Self-Employed
+            p.position Freelance client work
+            p.date Apr 2010 – May 2011
 
-            li
-              h3#eatdrink
-                a href="http://www.eatdrink.com" target="_blank" Eatdrink
-              p.position
-                | Web / Interactive Lead
-                br
-                | Web Designer / Developer
-                br
-                | Web Intern
-              p.date Mar 2003 – Mar 2009
+            h3#rrpartners
+              a href="https://www.rrpartners.com" target="_blank" rel="noopener" R&R Partners
+            p.position Web Developer
+            p.date Apr 2009 – Apr 2010
 
-        section
-          h2#education Education
+          .column
+            h3#eatdrink
+              a href="http://www.eatdrink.com" target="_blank" rel="noopener" Eatdrink
+            p.position
+              | Web / Interactive Lead
+              br
+              | Web Designer / Developer
+              br
+              | Web Intern
+            p.date Mar 2003 – Mar 2009
 
-          ul
-            li
+        section#education
+          h2 Education
+
+          .column
               h3#computer-science
                 | Bachelor of Arts
                 span.no-wrap< in Computer Science
@@ -111,20 +120,20 @@ html lang="en"
                 span.no-wrap<> Las Vegas
               p.date Dec 2005
 
-            li
+          .column
               h3#web-design
                 | Associate of Applied Science
                 span.no-wrap<> in Web Design
               p.college College of Southern Nevada
               p.date Dec 2003
 
-        section
-          h2#etcetera Etcetera
+        section#etcetera
+          h2 Etcetera
 
-          p
+          .column
             | I made
             a<>(
-              target="_blank"
+              target="_blank" rel="noopener"
               title="DOM X-Ray Google Chrome Extension"
               href="https://chrome.google.com/webstore/detail/dom-x-ray/olfkgegmjhgehnakignkabhbdchkhnkj"
             ) DOM X-Ray
@@ -133,81 +142,81 @@ html lang="en"
             br
             | through the DOM
 
-          p I’m also known to:
-          ul.bullet
-            li
-              a(
-                target="_blank"
-                title="Instagram"
-                href="https://instagram.com/sixftdwarf/"
-              ) snap photos
-            li
-              a(
-                target="_blank"
-                title="YouTube"
-                href="https://www.youtube.com/user/sixftdwarf"
-              ) strum tunes
-            li
-              a(
-                target="_blank"
-                title="Bandcamp"
-                href="http://annumford.com"
-              ) pen odes
-            li
-              a(
-                target="_blank"
-                title="WordPress"
-                href="https://sixfootdwarf.com"
-              ) wax poetic
+          .column.also-known
+            p I’m also known to:
+            ul.bullet
+              li
+                a(
+                  target="_blank" rel="noopener"
+                  title="I’m Still in Beta"
+                  href="https://instagram.com/im.still.in.beta/"
+                ) make faces
+              li
+                a(
+                  target="_blank" rel="noopener"
+                  title="Instagram"
+                  href="https://instagram.com/the.nick.vincent/"
+                ) snap photos
+              li
+                a(
+                  target="_blank" rel="noopener"
+                  title="YouTube"
+                  href="https://youtube.com/sixftdwarf"
+                ) strum tunes
+              li
+                a(
+                  target="_blank" rel="noopener"
+                  title="Bandcamp"
+                  href="https://annumford.com"
+                ) pen odes
 
-          p This webpage features:
-          ul.bullet
-            li
-              a(
-                target="_blank"
-                title="Read about CSS Grids"
-                href="https://css-tricks.com/snippets/css/complete-guide-grid/"
-              ) CSS grids
-            li
-              a(
-                target="_blank"
-                title="Read about System Fonts"
-                href="https://css-tricks.com/snippets/css/system-font-stack/"
-              ) system fonts
-            li
-              a(
-                target="_blank"
-                title="Read about Dark Mode"
-                href="https://css-tricks.com/dark-modes-with-css/"
-              ) dark mode
+          .column.webpage-features
+            p This webpage features:
+            ul.bullet
+              li
+                a(
+                  target="_blank" rel="noopener"
+                  title="Read about CSS Grids"
+                  href="https://css-tricks.com/snippets/css/complete-guide-grid/"
+                ) CSS grids
+              li
+                a(
+                  target="_blank" rel="noopener"
+                  title="Read about System Fonts"
+                  href="https://css-tricks.com/snippets/css/system-font-stack/"
+                ) system fonts
+              li
+                a(
+                  target="_blank" rel="noopener"
+                  title="Read about Dark Mode"
+                  href="https://css-tricks.com/dark-modes-with-css/"
+                ) dark mode
 
-          p.no-print While you’re here, you can:
-          ul.bullet.no-print
-            li
-              button#demo-dom-xray demo DOM X-Ray
-            li
-              button#demo-dark-mode toggle dark mode
-            li
-              button#print-page print this page
+          .column.no-print
+            p While you’re here, you can:
+            ul.bullet
+              li
+                button#demo-dom-xray demo DOM X-Ray
+              li
+                button#toggle-dark-mode toggle dark mode
+              li
+                button#print-page print this page
 
+      footer.no-print
+        .stripe
+    
     javascript:
       document.getElementById('demo-dom-xray')
         .addEventListener('click', function(e) {
-          e.preventDefault();
-          e.target.blur();
           document.documentElement.classList.toggle('dom-x-ray');
         });
 
-      document.getElementById('demo-dark-mode')
+      document.getElementById('toggle-dark-mode')
         .addEventListener('click', function(e) {
-          e.preventDefault();
-          e.target.blur();
           document.documentElement.classList.toggle('inverse-mode');
         });
 
       document.getElementById('print-page')
         .addEventListener('click', function(e) {
-          e.preventDefault();
-          e.target.blur();
           window.print()
         });

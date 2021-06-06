@@ -1,28 +1,37 @@
 a,
 button {
-  @media (hover: hover) {
-    &::after {
-      pointer-events: none;
-      display: inline;
-      position: absolute;
-      font-weight: 400;
-      opacity: 0;
-      transition: opacity 0.1s $easing-accelerate, transform 0.1s $easing-accelerate;
-    }
+  &::after {
+    pointer-events: none;
+    display: inline;
+    position: absolute;
+    font-weight: 400;
+    opacity: 0;
+    transition: opacity 0.1s $easing-accelerate,
+      transform 0.1s $easing-accelerate;
+  }
 
+  &:focus {
+    &::after {
+      opacity: 1;
+      transform: translateX(0.3em);
+      transition: opacity 0.1s $easing-decelerate,
+        transform 0.1s $easing-decelerate;
+    }
+  }
+
+  @media (hover: hover) {
     &:hover {
       &::after {
         opacity: 1;
         transform: translateX(0.3em);
-        transition: opacity 0.1s $easing-decelerate, transform 0.1s $easing-decelerate;
+        transition: opacity 0.1s $easing-decelerate,
+          transform 0.1s $easing-decelerate;
       }
     }
   }
 }
 
 a {
-  text-decoration: none;
-
   @media (hover: hover) {
     &::after {
       content: "\2192";
@@ -31,19 +40,9 @@ a {
 }
 
 button {
-  display: inline;
-  appearance: none;
-  background: none;
-  padding: 0;
-  margin: 0;
-  border: none;
   cursor: pointer;
 
   @media (hover: hover) {
-    &:active {
-      outline: none;
-    }
-
     &::after {
       content: "#";
     }
